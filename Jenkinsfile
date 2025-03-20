@@ -21,10 +21,10 @@ pipeline {
         stage ('docker build') {
             steps {
                 script {
-                    sh " " " 
-                    docker build -t python/project:1.0 .
-                    docker tag python/project:1.0 769644977981.dkr.ecr.us-east-1.amazonaws.com/python/project:1.0
-                    " " "
+                     sh """
+            docker build -t python/project:1.0 .
+            docker tag python/project:1.0 769644977981.dkr.ecr.us-east-1.amazonaws.com/python/project:1.0
+            """
                 }
             }
             stage ( 'docker push') {
