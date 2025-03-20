@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage ('git checkout') {
             steps {
-                git url:'', branch:'main'
+                git url:'https://github.com/praveenpeddapotula/python-project-2.git', branch:'main'
             }
         }
         stage ('login to aws ecr') {
